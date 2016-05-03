@@ -1,0 +1,15 @@
+prototype-based programming
+
+용도에 따라 묶는 형태 중복을 피할 수 있도록함ㄴ
+
+function Person(name){
+    this.name = name;
+    this.introduce = function(){
+        return 'My name is '+this.name; 
+    }   
+}
+var p1 = new Person('egoing'); // 함수가 생성자를 만들수있다!!!
+document.write(p1.introduce()+"<br />");
+ 
+var p2 = new Person('leezche');
+document.write(p2.introduce());

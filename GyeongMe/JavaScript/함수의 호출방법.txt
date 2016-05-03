@@ -1,0 +1,34 @@
+*** 함수호출 ***
+
+함수호출의 기본방법
+
+function func(){
+}
+func();
+
+함수에 내장되어있는 메소드를 사용하여 함수를 호출함
+
+function sum(arg1, arg2){
+    return arg1+arg2;
+}
+alert(sum.apply(null, [1,2]))
+
+하지만 위의 방법으로 굳이 호출할 필요없다
+
+만약 함수의 인자로 객채를 넣을때 .apply로 호출해야한다
+
+o1={val1:1, val2:2, val3:3}
+o2={v1:10, v2:50, v3:100, v4:25}
+
+function sum(){
+
+var _sum=0;
+for(name in this){
+    _sum+=this[name]
+     return _sum;
+}
+alert(sum.apply(o1)); // o1.sum()은 오류발생
+
+
+
+
